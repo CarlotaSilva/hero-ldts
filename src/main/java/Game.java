@@ -40,6 +40,10 @@ public class Game {
             KeyStroke key = screen.readInput();
             if(key.getKeyType() == KeyType.EOF) break;
             processKey(key);
+            if(arena.isDead()){
+                System.out.println("Dead");
+                break;
+            }
         }
     }
 
